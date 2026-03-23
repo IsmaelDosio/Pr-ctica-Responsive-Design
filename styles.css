@@ -1,0 +1,85 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000000;
+  color: #9ad79b;
+}
+
+/* HEADER - Fixed en la parte superior
+Voy a usar position: fixed; top: 0 para que este pegado arriba y width: 100% para que ocupe todo el ancho; */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #000000;
+  border-bottom: dashed 3px #9ad79b;
+  padding: 10px;
+  z-index: 100; /* Para que el header esté por encima de otros elementos */
+}
+
+main {
+  margin-top: 100px; /* Para dejar espacio al header fijo, ya que le he dado una altura de 100px al header */
+  position: relative; /* Para posicionar el sidebar de forma absoluta dentro del main */
+  padding: 20px;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 150px;
+  background-color: #000000;
+  padding: 20px;
+  border: dashed 2px #9ad79b;
+}
+
+.content {
+  width: 60%;
+  margin-right: 160px; /* Para dejar espacio al sidebar */
+  border: dashed 2px #9ad79b;
+  padding: 20px;
+  min-height: 220px; /* Para que el contenido tenga al menos la altura del sidebar */
+}
+
+.features {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  border-top: dashed 3px #9ad79b;
+  border-bottom: dashed 3px #9ad79b;
+  padding: 10px;
+  min-height: calc(
+    100vh - 100px
+  ); /* Para que features ocupe al menos toda la altura de la pantalla menos la altura del header y asi empuja el footer hacia abajo*/
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  border-top: dashed 3px #9ad79b;
+  margin-top: 20px;
+}
